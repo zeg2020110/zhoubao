@@ -1,0 +1,9 @@
+上周我在复现代码的过程中，发现了tensorflow框架在处理医学图像dicom格式数据集有点麻烦，
+本周我在pytorch上又复现了基于Residual Encoder-Decoder Convolutional Neural Network
+的低剂量CT处理过程：dataPrep首先将dicom图像转化为npy矩阵存在硬盘上，DataLoader将硬盘
+的npy数据加载到内存，networks搭建网络模型，solver定义训练的过程，main执行整个训练程序，
+test使用训练好的模型对新的低剂量CT进行去噪处理，并得到对比结果【png形式】，以及去噪后的npy数据，
+remakeDcm将test得到的npy转为新的dcm医学格式文件。
+在对使用深度学习的方法处理低剂量CT的过程有了充分了了解后，我开始去写开题报告了，根据综述论文
+A review on Deep Learning approaches for low‑dose Computed Tomography restoration
+，找出了2017-2021的使用深度学习方法处理低剂量CT的论文，进行有目的略读，了解这些方法的发展趋势！
